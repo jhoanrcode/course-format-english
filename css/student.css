@@ -1,0 +1,622 @@
+/* ESTILOS THEME - COURSE FORMAT - STUDENT */
+body.format-uniminuto_english .custom-header, body.format-uniminuto_english .navbar.fixed-top,
+body.format-uniminuto_english aside,
+body.format-uniminuto_english footer,
+body.format-uniminuto_english #page-wrapper .drawer-left, body.format-uniminuto_english #page-wrapper .drawer-right,
+body.format-uniminuto_english #page-wrapper [data-region=right-hand-drawer].drawer,
+body.format-uniminuto_english #topofscroll.main-inner .drawer-toggles .drawer-left-toggle,
+body.format-uniminuto_english #page.drawers .main-inner #page-header,
+body.format-uniminuto_english #page.drawers .main-inner .secondary-navigation,
+body.format-uniminuto_english #region-main #maincontent{
+    display: none;
+}
+body.format-uniminuto_english #page.drawers,
+body.format-uniminuto_english #topofscroll.main-inner{
+    margin: 0;
+}
+body.format-uniminuto_english #page.drawers, body.format-uniminuto_english #topofscroll.main-inner, 
+body.format-uniminuto_english #topofscroll.main-inner #page-content, body.format-uniminuto_english #topofscroll.main-inner #region-main,
+body.format-uniminuto_english #page.drawers div[role="main"]{ 
+    padding: 0 !important; 
+}
+body.format-uniminuto_english #page-wrapper{
+    height: auto!important;
+    min-height: 86vh;
+}
+body.format-uniminuto_english #page.drawers{
+    height: auto!important;
+    overflow: hidden!important;
+    min-height: inherit;
+}
+body.format-uniminuto_english #topofscroll.main-inner{ max-width: inherit !important; }
+body.format-uniminuto_english #topofscroll.main-inner #region-main{ border-radius: 0; }
+
+/* ESTILOS THEME - FORMAT - STUDENT */
+.uniminuto-english-format.student-section-format,
+.uniminuto-english-format.student-section-format--mobile{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.uniminuto-english-format.student-section-format{ background-color: #1c3143; }
+
+/* ESTILOS THEME - FORMAT - STUDENT HEADER */
+.uniminuto-english-format .english-header{
+    position: relative;
+    top: 0;
+    width: 580px;
+    line-height: 1.2;
+    transition: top 1s;
+    z-index: 2;
+}
+.uniminuto-english-format .english-header.hide-half{ top: -64px; }
+.uniminuto-english-format .english-header .english-header__top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background-color: #fff;
+}
+.uniminuto-english-format .english-header .english-header__top::before, 
+.uniminuto-english-format .english-header .english-header__top::after{
+    position: absolute;
+    display: block;
+    border-style: solid;
+    content: '';
+    top: 0;
+    z-index: 2;
+}
+.uniminuto-english-format .english-header .english-header__top::before{
+    left: -32px;
+    border-color: transparent #fff transparent transparent;
+    border-width: 0 32px 64px 0;
+}
+.uniminuto-english-format .english-header .english-header__top::after{
+    right: -32px;
+    border-color: transparent transparent transparent #fff;
+    border-width: 0 0 64px 32px;
+}
+.uniminuto-english-format .english-header .english-header__top .logo-header img{
+    max-height: 52px;
+}
+.uniminuto-english-format .english-header .english-header__bottom{
+    width: 568px;
+    margin: auto;
+    background-color: rgb(255 255 255 / 35%);
+    font-size: 16px;
+    border-radius: 0 0 50px 50px;
+}
+.uniminuto-english-format .english-header .english-header__bottom::before, 
+.uniminuto-english-format .english-header .english-header__bottom::after{
+    position: absolute;
+    display: block;
+    border-style: solid;
+    content: '';
+    top: 64px;
+    z-index: 2;
+}
+.uniminuto-english-format .english-header .english-header__bottom::before{
+    left: 0;
+    border-color: transparent #6b7985 transparent transparent;
+    border-width: 0 12px 24px 0;
+}
+.uniminuto-english-format .english-header .english-header__bottom::after{
+    right: 0;
+    border-color: transparent transparent transparent #6b7985;
+    border-width: 0 0 24px 12px;
+}
+.uniminuto-english-format .english-header .english-header__bottom .navbar{
+    box-shadow: none;
+    height: 50px;
+    justify-content: center;
+}
+.uniminuto-english-format .english-header .english-header__bottom .navbar .navbar-nav{
+    flex-direction: row;
+    margin: 0;
+    gap: 24px;
+}
+.uniminuto-english-format .english-header .english-header__bottom .navbar .navbar-nav .nav-item .nav-link{
+    box-shadow: none;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+.uniminuto-english-format .english-header .english-header__bottom .navbar .navbar-nav .nav-item .nav-link.active{
+    font-weight: 500;
+    color: #FFD300;
+}
+.uniminuto-english-format .english-header .english-header__bottom .navbar .navbar-nav .nav-item .nav-link:not(.active):hover {
+    color: #002243;
+    box-shadow: none;
+}
+
+/* ESTILOS THEME - FORMAT - STUDENT MENU RECOURSE */
+.uniminuto-english-format .container-menu{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 16px 0;
+    border-radius: 34px 0 0 34px;
+    z-index: 5;
+}
+.uniminuto-english-format .container-menu::before, .uniminuto-english-format .container-menu::after{
+    position: absolute;
+    display: block;
+    border-style: solid;
+    content: '';
+    right: 0;
+    z-index: 2;
+}
+.uniminuto-english-format .container-menu::before {
+    top: -0.675rem;
+    border-color: transparent #fff transparent transparent;
+    border-width: 12px 44px 0 0;
+}
+.uniminuto-english-format .container-menu::after {
+    bottom: -0.715rem;
+    border-color: transparent #fff transparent transparent;
+    border-width: 0 44px 12px 0;
+}
+.uniminuto-english-format .container__menu-resources{
+    position: relative;
+    padding: 8px 0;
+    border-radius: 16px 0 0 16px;
+    background-color: #fff;
+    filter: url(#fancy-goo);
+}
+.uniminuto-english-format .menu-resources{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+}
+.uniminuto-english-format .menu-resources .menu-resources__item {
+    width: 65px;
+    text-align: center;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    flex: 1;
+}
+.uniminuto-english-format .menu-resources .menu-resources__item:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 9px;
+    width: 20%;
+    height: 55%;
+    border-radius: 100% 0 0 100%;
+    z-index: 0;
+    background-color: transparent;
+    transition: all .25s;
+}
+.uniminuto-english-format .menu-resources .menu-resources__item:hover:after {
+    background-color: #fff;
+    left: -7px;
+    transform: translate3d(-20%,0%,0);
+}
+.uniminuto-english-format .menu-resources .menu-resources__item .icon-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all .4s;
+}
+.uniminuto-english-format .menu-resources .menu-resources__item .title-tooltip {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    translate: -50% -50%;
+    background: #222;
+    color: #fff;
+    font-size: .85rem;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    transition: 0.5s all ease-out;
+}
+.uniminuto-english-format .menu-resources .menu-resources__item:hover .title-tooltip {
+    opacity: 1;
+    visibility: visible;
+    translate: -20px -50%;
+}
+.uniminuto-english-format .menu-resources .menu-resources__item img{ 
+    max-height: 28px;
+    min-width: 18px;
+    width: auto;
+    transition: all .4s; 
+}
+.uniminuto-english-format .menu-resources .menu-resources__item:hover .icon-image{ background-color: #002C57; }
+.uniminuto-english-format .menu-resources .menu-resources__item:hover img{ 
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(292deg) brightness(104%) contrast(104%);
+    transform: scale(1.045) translate3d(0, -2px, 0);
+}
+
+/* ESTILOS THEME - FORMAT - STUDENT PROFILE */
+.uniminuto-english-format .english-profile{
+    position: absolute;
+    top: 9%;
+    right: 10%;
+    height: 78px;
+    width: 78px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, #ffffff 65%, #6e7992 85%);
+    box-shadow: 0 0 54px 18px #d6d6d6, 0 0 88px 36px #46526c, 0 0 116px 54px #1b2735;
+}
+.uniminuto-english-format .english-profile .usermenu .dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+.uniminuto-english-format .english-profile .usermenu .btn.dropdown-toggle{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+.uniminuto-english-format .english-profile .usermenu .btn.dropdown-toggle::after,
+.uniminuto-english-format .english-profile .usermenu .userbutton .avatars .current::before{ content: none; }
+.uniminuto-english-format .english-profile .usermenu .userbutton .avatars img.userpicture{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.uniminuto-english-format .english-profile .usermenu .usertext{ display: none !important; }
+.uniminuto-english-format .english-profile .usermenu .userinitials.size-35{
+    margin-right: 0px !important;
+    width: 68px;
+    height: 68px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #17426c;
+}
+.uniminuto-english-format .english-profile .usermenu .dropdown-menu.show {
+    display: block;
+    border: 2px solid #d8deef;
+    padding: 0.35rem 0;
+    margin: 0.3rem 0 0;
+}
+.uniminuto-english-format .english-profile .usermenu #usermenu-carousel{ font-family: 'Quicksand', sans-serif; }
+.uniminuto-english-format .english-profile .usermenu #usermenu-carousel .dropdown-item{ 
+    color: #3b4554;
+    padding: 0.25rem 1.25rem;
+}
+.uniminuto-english-format .english-profile .usermenu #usermenu-carousel .dropdown-item:hover,
+.uniminuto-english-format .english-profile .usermenu #usermenu-carousel .dropdown-item:focus{ 
+    background-color: #d5d8e1;
+    color: #002c57;
+}
+.uniminuto-english-format .english-profile .usermenu .dropdown-divider{ margin: 0.35rem 0; }
+
+/* ESTILOS THEME - FORMAT - STUDENT TITLE MODULE */
+.uniminuto-english-format .title-module{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 118px;
+    width: 100%;
+    gap: 8px;
+    z-index: 3;
+}
+.uniminuto-english-format .tab-pane:nth-child(1) .title-module{ top: 135px; }
+.uniminuto-english-format .title-module .title-module__letter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(255 255 255 / 96%);
+    border-radius: 50%;
+    text-transform: uppercase;
+    text-shadow: -2px 2px rgb(0 0 0 / 90%);
+    background-image: linear-gradient(240deg, rgb(74 203 243 / 55%) 26%, rgb(14 136 185 / 45%) 70%);
+    animation: letter-floating 1.5s ease-in-out 1;
+    animation-delay: calc(.1s * var(--i))
+}
+.uniminuto-english-format .title-module .title-module__space{ width: 12px; }
+@keyframes letter-floating {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    20% {
+      transform: translateY(-20px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+}
+
+/* ESTILOS THEME - FORMAT - STUDENT UNIDADES */
+.uniminuto-english-format .container-units{
+    position: absolute;
+    display: flex;
+    top: 260px;
+    left: 50%;
+    width: calc(100% - 150px);
+    max-width: 870px;
+    transform:  translateX(-50%);
+    z-index: 3;
+}
+.uniminuto-english-format .unit, .uniminuto-english-format .unit--inactive{ position: absolute; }
+.uniminuto-english-format .activity:nth-child(1){ left: 0; }
+.uniminuto-english-format .activity:nth-child(2){ left: calc(25% - 19px); top: -46px; }
+.uniminuto-english-format .activity:nth-child(3){ left: calc(50% - 38px); top: -18px; }
+.uniminuto-english-format .activity:nth-child(4){ left: calc(75% - 57px); top: -42px; }
+.uniminuto-english-format .activity:nth-child(5){ left: calc(100% - 76px); }
+.uniminuto-english-format .unit:hover .unit__detail{ animation: pulse-unit 2s ease-out infinite; }
+.uniminuto-english-format .unit:hover .unit__category,
+.uniminuto-english-format .unit--inactive:hover .unit__category{ opacity: 1; visibility: visible; }
+.uniminuto-english-format .unit .unit__detail, .uniminuto-english-format .unit--inactive .unit__detail{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+    align-items: center;
+    width: 76px;
+    height: 76px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    box-shadow: none;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+.uniminuto-english-format .unit .unit__detail{
+    background: radial-gradient(circle, rgba(255,211,100,1) 50%, transparent 52%, transparent 59%, rgba(255,211,100,1) 61%);
+    text-shadow: 0px 0px 4px rgb(53 40 5);
+}
+.uniminuto-english-format .unit .unit__category, .uniminuto-english-format .unit--inactive .unit__category{
+    position: absolute;
+    bottom: -12px;
+    left: -12px;
+    display: flex;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s cubic-bezier(0.4, 0, 1, 1);
+}
+.uniminuto-english-format .unit__category--progress{
+    position: absolute;
+    top: 64px;
+    left: calc(-62px);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease;
+    z-index: 4;
+}
+.uniminuto-english-format .unit__category--progress.active {
+    opacity: 1;
+    visibility: visible;
+}
+.uniminuto-english-format .unit__category--progress .progress-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 4px;
+    background-color: #010f1d;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 8px 16px;
+}
+.uniminuto-english-format .unit__category--progress .progress-top h4{
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+}
+.uniminuto-english-format .unit__category--progress .progress-top .close-category{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.uniminuto-english-format .unit__category--progress .progress-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: rgb(102 115 128 / 85%);
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 8px 16px 10px;
+}
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+    color: #fff;
+}
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress .category--title {
+    width: calc(100% - 90px);
+    font-size: .9rem;
+}
+.uniminuto-english-format .unit__category--progress .progress-bottom .progress {
+    width: 56px;
+    height: 10px;
+}
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress:nth-child(1) .progress .progress__bar { background-color: #ff6384; }
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress:nth-child(2) .progress .progress__bar { background-color: #36a2eb; }
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress:nth-child(3) .progress .progress__bar { background-color: #ffce56; }
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress:nth-child(4) .progress .progress__bar { background-color: #4bc0c0; }
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress:nth-child(5) .progress .progress__bar { background-color: #9966ff; }
+.uniminuto-english-format .unit__category--progress .progress-bottom .category-progress .progress--number{ font-size: .7rem; }
+.uniminuto-english-format .unit--inactive .unit__detail{
+    background: radial-gradient(circle,#434d53 50%,transparent 52%,transparent 59%,#434d53 61%);
+    text-shadow: 0 0 4px rgb(0 0 0);
+}.uniminuto-english-format .unit--inactive::before {
+    content: 'Complete previous activity';
+    position: absolute;
+    top: 0px;
+    left: -53px;
+    white-space: nowrap;
+    padding: 6px 12px 8px;
+    font-size: .85rem;
+    background: #222;
+    color: #fff;
+    border-radius: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+.uniminuto-english-format .unit--inactive:hover .unit__detail{ animation: pulse-unit--inactive 2s ease-out infinite; }
+.uniminuto-english-format .unit--inactive:hover::before{ 
+    opacity: 1; 
+    visibility: visible;
+    transform: translateY(-42px);
+}
+.uniminuto-english-format .move .activity{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    transition: all 1.5s ease-in-out;
+}
+.uniminuto-english-format .move .activity.active{
+    z-index: 4;
+}
+@keyframes pulse-unit {
+	0% {
+		transform: scale(0.94);
+		box-shadow: 0 0 0 0 rgba(255,211,100, 0.65);
+	}
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(59, 81, 103, 0);
+	}
+	100% {
+		transform: scale(0.94); 
+		box-shadow: 0 0 0 0 rgba(59, 81, 103, 0);
+	}
+}
+@keyframes pulse-unit--inactive {
+	0% { box-shadow: 0 0 0 0 rgba(67,77,83, 0.75); }
+	70% { box-shadow: 0 0 0 10px rgba(59, 81, 103, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(59, 81, 103, 0); }
+}
+
+/* ESTILOS THEME - FORMAT - STUDENT MODAL */
+.uniminuto-english-format .modal-menu-recourse .modal-xl,
+.uniminuto-english-format .modal-units .modal-xl { max-width: 610px; }
+.uniminuto-english-format .modal-menu-recourse.fade:not(.show){
+    opacity: initial;
+    transition: all .5s;
+    transform: scale(1);
+    animation: unfoldOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.uniminuto-english-format .modal-menu-recourse.show{
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1.25s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.uniminuto-english-format .modal-menu-recourse.fade .modal-dialog{
+    transform: none;
+    transition: none;
+}
+.uniminuto-english-format .modal-menu-recourse .modal-content{ border: 2px solid #748ca3; }
+.uniminuto-english-format .modal-menu-recourse .modalClose,
+.uniminuto-english-format .modal-units .modalClose { background: #748ca3; z-index: 3; }
+.uniminuto-english-format .modal-units .modalOpen { right: 24px;padding: 0.75em; }
+.uniminuto-english-format .modal-menu-recourse .modalSection__body,
+.uniminuto-english-format .modal-units .modalSection__body { max-height: calc(100vh - 250px); }
+.uniminuto-english-format .modal-units.fade .modal-dialog{ transform: none; }
+.uniminuto-english-format .modal-units .modal-content { border: none; background-color: transparent; }
+.uniminuto-english-format .modal-units .modal-content::before, .uniminuto-english-format .modal-units .modal-content::after {
+    position: absolute;
+    content: "";
+    box-sizing: inherit;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    z-index: 1;
+}
+.uniminuto-english-format .modal-units .modal-content::before { top: 0; left: 0; }
+.uniminuto-english-format .modal-units .modal-content::after { bottom: 0; right: 0; }
+.uniminuto-english-format .modal-units.show--animation .modal-content::before, .uniminuto-english-format .modal-units.show--animation .modal-content::after {
+    width: 100%;
+    height: 100%;
+}
+.uniminuto-english-format .modal-units.show--animation .modal-content::before {
+    border-top-color: #c6cfd5;
+    border-right-color: #c6cfd5;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+.uniminuto-english-format .modal-units.show--animation .modal-content::after {
+    border-bottom-color: #c6cfd5;
+    border-left-color: #c6cfd5;
+    transition: border-color 0s ease-out 1s, width 0.25s ease-out 1s, height 0.25s ease-out 1.25s;
+}
+.uniminuto-english-format .modal-units .modal-body { 
+    background-color: #fff; 
+    padding: 2px;
+    opacity: 0; 
+    border-radius: 0.75rem;
+    transition: opacity .35s ease-out 1.75s;
+}
+.uniminuto-english-format .modal-units.show--animation .modal-body { opacity: 1; }
+.uniminuto-english-format .modal-units .modal-body .frame-plugin{
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 340px;
+    max-height: calc(100vh - 250px);
+    border-radius: 0.75rem;
+    z-index: 2;
+}
+@media screen and (min-width: 992px) {   
+    .uniminuto-english-format .modal-menu-recourse .modal-xl,
+    .uniminuto-english-format .modal-units .modal-xl { max-width: 924px; }
+    .uniminuto-english-format .modal-units .modal-body .frame-plugin{ min-height: 518px; }
+}
+
+@keyframes unfoldIn {
+    0% { transform:scaleY(.005) scaleX(0); }
+    50% { transform:scaleY(.005) scaleX(1); }
+    100% { transform:scaleY(1) scaleX(1); }
+}
+@keyframes unfoldOut {
+    0% { transform:scaleY(1) scaleX(1); }
+    50% { transform:scaleY(.005) scaleX(1); opacity: 0; }
+    100% { transform:scaleY(.005) scaleX(0); opacity: 0; }
+}
+  

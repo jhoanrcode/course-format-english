@@ -1,0 +1,81 @@
+{{!
+    @template format_uniminuto_course/admin_layout
+
+
+    Example context (json):
+    {
+        "editing: "1",
+        "courseformat: "1",
+        "theme: "",
+        "user_id: "1",
+        "courseid: "1",
+        "classname_modalidad: "Clase de modalidad",
+        "course_name: "Nombre del Curso",
+        "info_banner": [
+            {
+                "banner_classname": "clase modalidad",
+                "banner_background_imagen": "path",
+            }
+        ],
+        "summary_course": "Text Summary Course",
+        "image_url": path,
+        "info_percentage": [
+            {
+                "title_percentage": "Text title",
+                "percentage": "#",
+            }
+        ],
+        "info_identificacion": <code></code>,
+        "info_modal_presentacion": [
+            {
+                "name_modal": "Text Name",
+                "url_frame": "URL",
+                "hasurl": "URL",
+            }
+        ],
+        "has_modulo_simple": true / false,
+        "info_modal_evaluacion": [
+            {
+                "name_modal": "Text Name",
+                "content_modal": <code></code>,
+            }
+        ],
+    }
+}}
+
+<!-- Menu Recursos -->
+<div class="container-menu">
+    <div class="container__menu-resources">
+        <ul class="menu-resources">
+            {{#info_menu_recourse}}
+            <li class="menu-resources__item menu-resources__item--section" data-toggle="modal" data-target="#sectionsMenuRecourse" data-recourse="{{{num_section}}}">
+                <div class="icon-image">
+                    <img class="img-fluid" src="{{{image_url}}}/{{{icon_section}}}.svg" alt="{{{name_section}}}">
+                </div>
+                <span class="title-tooltip">{{{name_section}}}</span>
+            </li>
+            {{/info_menu_recourse}}
+            <li class="menu-resources__item menu-resources__item--course" data-openmodal="{{{participants_url}}}" >
+                <div class="icon-image">
+                    <img class="img-fluid" src="{{{image_url}}}/participants.svg" alt="Participants">
+                </div>
+                <span class="title-tooltip">Participants</span>
+            </li>
+            <li class="menu-resources__item menu-resources__item--course" data-openmodal="{{{grades_url}}}" >
+                <div class="icon-image">
+                    <img class="img-fluid" src="{{{image_url}}}/presentation.svg" alt="Grades">
+                </div>
+                <span class="title-tooltip">Grades</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+    <filter id="fancy-goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+    </defs>
+</svg>

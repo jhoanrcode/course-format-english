@@ -1,0 +1,338 @@
+/* ESTILOS THEME - FORMAT */
+body#page-course-view-uniminuto_english #topofscroll.main-inner{
+    position: relative; 
+    max-width: 970px;
+}
+body#page-course-view-uniminuto_english .new-height #topofscroll.main-inner{ max-width: 1200px; }
+
+/* ESTILOS THEME - FORMAT - EDITING */
+body#page-course-view-uniminuto_english.editing #topofscroll.main-inner #page-header{ display: block; }
+body#page-course-view-uniminuto_english.editing #topofscroll.main-inner .secondary-navigation{ margin-top: 20px; }
+body#page-course-view-uniminuto_english.editing #topofscroll.main-inner .course-content .uniminuto_english { padding-left: 0; }
+body#page-course-view-uniminuto_english.editing #topofscroll.main-inner .course-content .uniminuto_english .course-section { 
+    background-color: #fbfbfc;
+    border-radius: 0.5rem;
+    border: 1px solid #f4f6f7;
+    padding: 24px 32px;
+    margin-bottom: 16px;
+}
+body#page-course-view-uniminuto_english.editing #topofscroll.main-inner .course-content .uniminuto_english .course-section .activity-item{ background-color: #fff; }
+body#page-course-view-uniminuto_english.editing #region-main .course-content .changenumsections .add-sections{
+    display: block;
+    background-color: #f5f9fc;
+    width: 150px;
+    padding: 6px 12px;
+    margin: 16px auto 0;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    text-decoration: none;
+}
+body#page-course-view-uniminuto_english.editing #region-main .course-content .changenumsections .add-sections:hover{ background-color: #cfe2f2; }
+
+/* ESTILOS THEME - FORMAT - TEACHER */
+.uniminuto-english-format .section-teacher{ margin-top: 32px; }
+.uniminuto-english-format .section-teacher:first-child { margin-top: 16px; }
+body#page-course-view-uniminuto_english .new-height .uniminuto-english-format .section-teacher:first-child{ margin-top: 0; }
+.uniminuto-english-format .section-teacher .section-teacher__title{ 
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+.uniminuto-english-format .section-teacher .section-teacher__row,
+.uniminuto-english-format .section-teacher .section-teacher__grid{
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #e6e7ea;
+    background-color: #F6F7F9;
+}
+.uniminuto-english-format .section-teacher .section-teacher__row .background-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px 28px;
+    gap: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px 0px rgba(107, 107, 107, 0.15);
+}
+.uniminuto-english-format .section-teacher .section-teacher__row .link-seccion,
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__link{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    box-shadow: none;
+}
+.uniminuto-english-format .section-teacher .section-teacher__row .link-seccion:hover p,
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__link:hover p{ color: #475569; }
+.uniminuto-english-format .section-teacher .section-teacher__row .link-seccion p,
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item .link-seccion p,
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__link p{
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+}
+.uniminuto-english-format .section-teacher .section-teacher__row .link-seccion .icon-image img,
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__link .icon-image img{
+    max-height: 24px;
+    min-width: 18px;
+    width: auto;
+    -webkit-filter: invert(12%) sepia(46%) saturate(3722%) hue-rotate(196deg) brightness(91%) contrast(101%);
+    filter: invert(12%) sepia(46%) saturate(3722%) hue-rotate(196deg) brightness(91%) contrast(101%);
+}
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-secciones{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
+}
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item{
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px 0px rgba(107, 107, 107, 0.15);
+    transition: all .25s;
+}
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item:hover,
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item:focus{
+    box-shadow: 0px 0px 12px 4px rgb(107 107 107 / 25%);
+}
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item .link-seccion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+}
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item .link-seccion p{ width: 100%; }
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item .link-seccion .icon-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background-color: #002C57;
+    border-radius: 0.5rem;
+}
+.uniminuto-english-format .section-teacher .section-teacher__grid .grid-item .link-seccion img{
+    max-height: 24px;
+    min-width: 18px;
+    width: auto;
+    -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(292deg) brightness(104%) contrast(104%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(292deg) brightness(104%) contrast(104%);
+}
+@media screen and (min-width: 576px) {
+    .uniminuto-english-format .section-teacher .section-teacher__grid .grid-secciones{ grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); }
+    .uniminuto-english-format .section-teacher .section-teacher__grid .grid-item{ max-width: 245px; }
+}
+
+/* ESTILOS THEME - FORMAT - TEACHER MODAL */
+body.format-uniminuto_english .modal-backdrop{ z-index: 1043; }
+.uniminuto-english-format .modal-sections .modal-content{  
+    border: 2px solid #11273c;
+    border-radius: 0.75rem; 
+}
+.uniminuto-english-format .modal-sections .modalClose,
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel--control{
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 0;
+    padding: 0.6rem;
+    background: #364b60;
+    border-radius: 50%;
+    border: none;
+    color: #FFFFFF;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 1;
+}
+.uniminuto-english-format .modal-sections .modalClose{ 
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 36px;
+    height: 36px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel-item{ transition: transform 0.5s ease-out; }
+.uniminuto-english-format .modal-sections .modalClose:hover,
+.uniminuto-english-format .modal-sections .modalClose:focus,
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel--control:hover{ background-color: #667788; }
+.uniminuto-english-format .modal-sections .modalClose svg,
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel--control svg{ fill: #FFFFFF }
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel--control{ 
+    top: calc(50% - 28px);
+    width: 56px;
+    height: 56px;
+    transition: all 0.25s ease;
+	transform: scale(1);
+}
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel--control:hover{ box-shadow: 0 0 0 0 #667788; animation: pulse-control 1.75s ease-out infinite; }
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel-control-prev{ left: -44px;}
+.uniminuto-english-format .modal-sections .modal-body .carousel .carousel-control-next{ right: -44px;}
+@keyframes pulse-control {
+	0% {
+		transform: scale(0.92);
+		box-shadow: 0 0 0 0 rgba(59, 81, 103, 0.7);
+	}
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(59, 81, 103, 0);
+	}
+	100% {
+		transform: scale(0.92); 
+		box-shadow: 0 0 0 0 rgba(59, 81, 103, 0);
+	}
+}
+.uniminuto-english-format .modal-sections .modalSection__header{ 
+    text-align: center;
+    border-bottom: 1px solid rgb(0 0 0 / 15%);
+}
+.uniminuto-english-format .modal-sections .modalSection__header-title{ 
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.uniminuto-english-format .modal-sections .modalSection__body{ 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    padding: 24px 36px 12px;
+    min-height: 250px;
+    max-height: calc(100vh - 128px);
+    gap: 16px;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--label{ display: block; }
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__link{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    width: calc(100% - 46px);
+    padding-bottom: 6px;
+    border-bottom: 1px dashed rgb(0 0 0 / 15%);
+    text-decoration: none;
+    box-shadow: none;
+    gap: 12px;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__mark .togglecompletion{ margin: 0; }
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__mark .togglecompletion div{ display: flex; }
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__mark .btn-link{ 
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    line-height: 0;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__mark .icon{ 
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity .list-activity__mark .icon:hover{
+    filter: invert(48%) sepia(6%) saturate(776%) hue-rotate(167deg) brightness(89%) contrast(83%);
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .list-activity .list-activity__link{ width: calc(100% - 62px); }
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .list-activity .list-activity__editcategorie{ 
+    padding: 0;
+    margin: 0 9px 0 0;
+    font-size: 17px;
+    color: #888d91;
+    border: none;
+    box-shadow: none;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .list-activity .list-activity__editcategorie:hover{ color: #6d7780; }
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity{ 
+    background-color: #f6f7f8;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity .slide-categories{ 
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity .slide-categories .slide{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity .slide-categories .slide label,
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity .slide-categories .slide select{ font-size: .9rem; }
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity .slide-categories .slide label{
+    margin: 0;
+    text-align: right;
+    width: 62px;
+}
+.uniminuto-english-format .modal-sections .modalSection__body .list-activity--h5p .edit-activity .slide-categories .slide select{ 
+    height: auto;
+    color: #4e5761;
+    padding: 4px 24px 4px 12px;
+    border: 1px solid #b0bdcb;
+}
+
+@media screen and (min-width: 1100px) {
+    .uniminuto-english-format .modal-sections .modal-xl{ max-width: 1024px; }
+}
+@media screen and (min-width: 576px) {
+    .uniminuto-english-format .modal-sections .modal-xl{ max-width: calc(100% - 9rem); }
+}
+@media screen and (max-width: 575px) {
+    .uniminuto-english-format .modal-sections .modal-content{ overflow-y:inherit; }
+    .uniminuto-english-format .modal-sections .modalClose{
+        top: -10px;
+        right: -7px;
+        width: 22px;
+        height: 22px;
+        padding: 0.35rem;
+    }
+    .uniminuto-english-format .modal-sections .modal-body .carousel .carousel--control{
+        top: calc(50% - 18px);
+        width: 36px;
+        height: 36px;
+        padding: 0.5rem;
+    }
+    .uniminuto-english-format .modal-sections .modal-body .carousel .carousel-control-prev{ left: -24px;}
+    .uniminuto-english-format .modal-sections .modal-body .carousel .carousel-control-next{ right: -24px;}
+    .uniminuto-english-format .modal-sections .modalSection__body{ padding: 12px 24px; }
+}

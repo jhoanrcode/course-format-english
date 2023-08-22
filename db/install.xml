@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="course/format/uniminuto_english/db" VERSION="2023070602" COMMENT="XMLDB file for Moodle contribution course/format/uniminuto_english"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd">
+  <TABLES>
+    <TABLE NAME="hvp_english_category" COMMENT="Save category of slides H5P course format english">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" UNSIGNED="true" />
+        <FIELD NAME="number_slide" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Slide number" />
+        <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Course ID" />
+        <FIELD NAME="hvp_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="H5P ID" />
+        <FIELD NAME="library" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Labrary slide h5p" />
+        <FIELD NAME="category" TYPE="char" LENGTH="50" NOTNULL="false" SEQUENCE="false" COMMENT="Category slide" />
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

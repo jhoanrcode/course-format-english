@@ -1,0 +1,119 @@
+{{!
+    @template format_uniminuto_course/student_layout
+
+
+    Example context (json):
+    {
+        "url_logo: "URL",
+        "image_url: "path",
+        "classname_modalidad: "Clase de modalidad",
+        "info_sections_module": [
+            {
+                "hiddensection": true / false,
+                "num_section": "#",
+                "name_section": "Text name",
+                "active_nav_section": "Clase seccion activada",
+                "tab_welcome": true / false,
+                "title_module": [{ "has_char_title": true / false, "key_char_title": "#", "char": "letra" }]
+                "data_activity": [
+                    {
+                        "url_frame": "URL",
+                        "links_welcome": [
+                            {
+                                "name_module": "Text Name",
+                                "pageurl": "URL",
+                                "window_pageurl": "URL",
+                                "type_module": "Text tipo actividad",
+                            }
+                        ],
+                        "units": [
+                            {
+                                "name_module": "Text Name",
+                                "num_module": "#",
+                                "type_module": "Text tipo actividad",
+                                "pageurl": "URL",
+                                "class_unit_state": "Clase unidad activada",
+                                "progress_data": [{}],
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+    }
+}}
+
+<div id="student-container" class="uniminuto-english-format student-section-format d-none d-md-block">
+
+    <!-- Nav Header -->
+    <div class="english-header mx-auto">
+        <div class="english-header__top">
+            <a href="{{{ config.homeurl }}}" class="logo-header"><img class="img-fluid" src="{{{url_logo}}}" alt="Uniminuto"></a>
+        </div>
+        <div class="english-header__bottom">
+            <nav class="navbar">
+                <ul class="navbar-nav" id="myTab" >
+                    {{#info_sections_module}}
+                    <li class="nav-item {{{active_nav_section}}}">
+                        <a class="nav-link {{{active_nav_section}}}" href="javascript:void(0);" data-target="tab{{{num_section}}}">{{{name_section}}}</a>
+                    </li>
+                    {{/info_sections_module}}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Tabs Contenido Modulos -->
+    <div class="tab-content">
+
+        <!-- Tab Modulos -->
+        {{#info_sections_module}}
+        <div class="tab-pane {{{active_nav_section}}}" id="tab{{{num_section}}}">
+
+            <!-- Titulo Modulo -->
+            <div class="title-module">
+                {{#title_module}}
+                    {{#has_char_title}} <div class="title-module__letter" style="--i:{{{key_char_title}}};">{{{char}}}</div>{{/has_char_title}}
+                    {{^has_char_title}} <div class="title-module__space"></div> {{/has_char_title}}
+                {{/title_module}}
+            </div>
+            
+            <!-- Contenido Modulo Welcome -->
+            {{#tab_welcome}}
+                {{> format_uniminuto_english/tab-welcome }}
+            {{/tab_welcome}}
+            
+            <!-- Contenido Modulo Unidades -->
+            {{^tab_welcome}}
+                {{> format_uniminuto_english/tabs-units }}
+            {{/tab_welcome}}
+ 
+        </div>
+        {{/info_sections_module}}
+
+        
+    </div>
+        
+    <!-- Menu Recursos -->
+    {{> format_uniminuto_english/menu-recourse }}
+
+    <!-- Menu Profile -->
+    {{> format_uniminuto_english/profile-student }}
+
+    <!-- Ventana modal Recursos -->
+    {{> format_uniminuto_english/modal-recourse }}
+
+    <!-- Fondos Animados -->
+    {{> format_uniminuto_english/background-student }}
+
+</div>
+
+<div id="student-container" class="uniminuto-english-format student-section-format--mobile d-flex align-items-center px-3 d-md-none">
+    <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Ups!</h4>
+        <p>Disculpe las molestias, de momento para ingresar al contenido de este curso solamente es posible desde una pantalla de escritorio.</p>
+        <hr>
+        <p class="mb-0">Acceda desde una pantalla de escritorio o desde un dispositivo con un tamaño superior a 860px X 640px.</p>
+    </div>
+</div>
+

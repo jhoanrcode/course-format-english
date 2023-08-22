@@ -1,0 +1,59 @@
+{{!
+    @template format_uniminuto_course/student_layout
+
+
+    Example context (json):
+    {
+        "image_url: "path",
+        "classname_modalidad: "Clase de modalidad",
+        "info_sections_module": [
+            {
+                "hiddensection": true / false,
+                "num_section": "#",
+                "name_section": "Text name",
+                "active_nav_section": "Clase seccion activada",
+                "tab_welcome": true / false,
+                "data_activity": [
+                    {
+                        "url_frame": "URL",
+                        "links_welcome": [
+                            {
+                                "name_module": "Text Name",
+                                "pageurl": "URL",
+                                "window_pageurl": "URL",
+                                "type_module": "Text tipo actividad",
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+    }
+}}
+
+<!-- Links Senal Transito -->
+<div class="background-road-sign">
+    <div class="poste poste--left"></div>
+    <div class="poste poste--right"></div>
+    <div class="contain-road-sign">
+        {{#data_activity.links_welcome}}
+        <div class="road-sign"><a class="road-sign-link text-truncate" href="{{{pageurl}}}" {{{window_pageurl}}}>{{{name_module}}}</a></div>
+        {{/data_activity.links_welcome}}
+        {{^data_activity.links_welcome}}
+        <div class="road-sign text-center text-white">{{#str}}no_activities_found, format_uniminuto_english{{/str}}</div>
+        {{/data_activity.links_welcome}}
+    </div>
+</div>
+<!-- iFrame Video -->
+<div class="background-city background-video-frame">
+    <img class="img-frame" src="{{{image_url}}}/video-iframe.png">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{{data_activity.url_frame}}}" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Fondos City -->
+<div class="background-city background-city-light"></div>
+<div class="background-city background-city--behind"></div>
+
+

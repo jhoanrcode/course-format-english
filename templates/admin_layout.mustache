@@ -1,0 +1,129 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+{{!
+    @template format_uniminuto_course/admin_layout
+
+
+    Example context (json):
+    {
+        "editing: "1",
+        "courseformat: "1",
+        "theme: "",
+        "user_id: "1",
+        "courseid: "1",
+        "classname_modalidad: "Clase de modalidad",
+        "course_name: "Nombre del Curso",
+        "info_banner": [
+            {
+                "banner_classname": "clase modalidad",
+                "banner_background_imagen": "path",
+            }
+        ],
+        "summary_course": "Text Summary Course",
+        "image_url": path,
+        "info_percentage": [
+            {
+                "title_percentage": "Text title",
+                "percentage": "#",
+            }
+        ],
+        "info_identificacion": <code></code>,
+        "info_modal_presentacion": [
+            {
+                "name_modal": "Text Name",
+                "url_frame": "URL",
+                "hasurl": "URL",
+            }
+        ],
+        "has_modulo_simple": true / false,
+        "info_modal_evaluacion": [
+            {
+                "name_modal": "Text Name",
+                "content_modal": <code></code>,
+            }
+        ],
+    }
+}}
+<div id="admin-container" class="uniminuto-english-format admin-section-format px-3 px-md-0">
+   
+    <!-- Section Generalidades -->
+    {{#info_sections_general.has_activity}}
+    <section class="section-teacher">
+        <h4 class="section-teacher__title">{{{info_sections_general.name_section}}}</h4>
+        <div class="section-teacher__row">
+            <div class="background-container col-12">
+                {{#info_sections_general.data_activity}}
+                    {{#type_activity}}
+                        <!-- Content Activity -->
+                        <a class="link-seccion" href="{{{pageurl}}}" {{{window_pageurl}}}>
+                            <div class="icon-image" title="{{{name_module}}}">
+                                <img class="img-fluid" src="{{{icon_module}}}" alt="{{{name_module}}}">
+                            </div>
+                            <p class="text-truncate">{{{name_module}}}</p>
+                        </a>
+                    {{/type_activity}}
+                    {{^type_activity}}
+                        <!-- Content Label --> {{{summary_label}}}
+                    {{/type_activity}}
+                {{/info_sections_general.data_activity}}
+            </div>
+        </div>
+    </section>
+    {{/info_sections_general.has_activity}}
+
+    <section class="section-teacher">
+        <h4 class="section-teacher__title">{{#str}}title_modules, format_uniminuto_english{{/str}}</h4>
+        <div class="section-teacher__grid">
+            <div class="grid-secciones">
+                {{#info_sections_module}}
+                <div class="grid-item">
+                    <a class="link-seccion" href="#" data-toggle="modal" data-target="#sectionsModule" data-slide-to="{{{num_section}}}">
+                        <div class="icon-image" title="{{{name_section}}}">
+                            <img class="img-fluid" src="{{{image_url}}}/{{{icon_section}}}.svg" alt="{{{name_section}}}">
+                        </div>
+                        <p class="text-truncate">{{{name_section}}}</p>
+                    </a>
+                </div>
+                {{/info_sections_module}}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-teacher">
+        <h4 class="section-teacher__title">{{#str}}title_resources, format_uniminuto_english{{/str}}</h4>
+        <div class="section-teacher__grid">
+            <div class="grid-secciones">
+                {{#info_sections_recourse}}
+                <div class="grid-item">
+                    <a class="link-seccion" href="#" data-toggle="modal" data-target="#sectionsRecursos" data-slide-to="{{{num_section}}}">
+                        <div class="icon-image" title="{{{name_section}}}">
+                            <img class="img-fluid" src="{{{image_url}}}/{{{icon_section}}}.svg" alt="{{{name_section}}}">
+                        </div>
+                        <p class="text-truncate">{{{name_section}}}</p>
+                    </a>
+                </div>
+                {{/info_sections_recourse}}
+            </div>
+        </div>
+    </section>
+
+    {{> format_uniminuto_english/modal-section }}
+
+</div>
+
+

@@ -1,0 +1,193 @@
+{{!
+    @template format_uniminuto_course/admin_layout
+
+
+    Example context (json):
+    {
+        "editing: "1",
+        "courseformat: "1",
+        "theme: "",
+        "user_id: "1",
+        "courseid: "1",
+        "classname_modalidad: "Clase de modalidad",
+        "course_name: "Nombre del Curso",
+        "info_banner": [
+            {
+                "banner_classname": "clase modalidad",
+                "banner_background_imagen": "path",
+            }
+        ],
+        "summary_course": "Text Summary Course",
+        "image_url": path,
+        "info_percentage": [
+            {
+                "title_percentage": "Text title",
+                "percentage": "#",
+            }
+        ],
+        "info_identificacion": <code></code>,
+        "info_modal_presentacion": [
+            {
+                "name_modal": "Text Name",
+                "url_frame": "URL",
+                "hasurl": "URL",
+            }
+        ],
+        "has_modulo_simple": true / false,
+        "info_modal_evaluacion": [
+            {
+                "name_modal": "Text Name",
+                "content_modal": <code></code>,
+            }
+        ],
+    }
+}}
+
+
+<!-- Modal Section Modules -->
+<div class="modal fade modal-sections" id="sectionsModule" tabindex="-1" aria-labelledby="sectionsModuleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close modalClose" data-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.05 24.05" xml:space="preserve"><path d="m14.338 11.748 6.012 -6.056a0.671 0.671 0 0 0 0 -0.973l-0.928 -0.973a0.671 0.671 0 0 0 -0.973 0l-6.057 6.056a0.447 0.447 0 0 1 -0.648 0L5.687 3.7a0.671 0.671 0 0 0 -0.973 0l-0.975 0.973a0.671 0.671 0 0 0 0 0.973l6.057 6.056a0.447 0.447 0 0 1 0 0.648L3.7 18.455a0.671 0.671 0 0 0 0 0.973l0.973 0.973a0.671 0.671 0 0 0 0.973 0l6.056 -6.056a0.447 0.447 0 0 1 0.648 0l6.056 6.056a0.671 0.671 0 0 0 0.973 0l0.976 -0.972a0.671 0.671 0 0 0 0 -0.973l-6.012 -6.056a0.447 0.447 0 0 1 0 -0.648z"/></svg>
+                </button>
+                <div id="carouselSectionControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        {{#info_sections_module}}
+                        <div class="carousel-item {{{active_carousel_section}}}">
+                            <div class="modalSection__header mx-3">
+                                <h2 class="modalSection__header-title">{{{name_section}}}</h2>
+                            </div>
+                            <div class="modalSection__body" id="{{{id_accordion_h5p}}}">
+                                {{#data_activity}}
+
+                                    {{#type_activity_h5p}}
+                                    <!-- Content Activity H5P -->
+                                    <div class="list-activity--h5p">
+                                        <div class="list-activity">
+                                            <a class="list-activity__link mx-3" href="{{{pageurl}}}" {{{window_pageurl}}}>
+                                                <div class="icon-image" title="{{{name_module}}}">
+                                                    <img class="img-fluid" src="{{{icon_module}}}" alt="{{{name_module}}}">
+                                                </div>
+                                                <p class="text-truncate">{{{name_module}}}</p>
+                                            </a>
+                                            <button class="btn collapsed list-activity__editcategorie" type="button" title="Edit slide category" data-toggle="collapse" data-target="#collapse{{{id_module}}}"><i class="fa fa-cog" aria-hidden="true"></i></button>
+                                            {{#mark_completion}} <div class="list-activity__mark">{{{mark_completion}}}</div> {{/mark_completion}}
+                                        </div>
+                                        <div class="edit-activity collapse" id="collapse{{{id_module}}}" data-parent="#{{{id_accordion_h5p}}}">
+                                            <div class="card-body slide-categories">
+                                            {{#slides_categories}}
+                                                <div class="slide"><label>{{{name_slide}}}</label>
+                                                    <select class="custom-select" data-hvp="{{{id_hvp_module}}}" data-slide="{{{id_slide}}}">
+                                                        {{{options}}}
+                                                    </select>
+                                                </div>
+                                            {{/slides_categories}}
+                                            {{^slides_categories}}
+                                                <p class="my-3 text-center">{{#str}}no_activities_found, format_uniminuto_english{{/str}}</p>
+                                            {{/slides_categories}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/type_activity_h5p}}
+
+                                    {{^type_activity_h5p}}
+                                        {{#type_activity}}
+                                        <!-- Content Activity -->
+                                        <div class="list-activity">
+                                            <a class="list-activity__link mx-3" href="{{{pageurl}}}" {{{window_pageurl}}}>
+                                                <div class="icon-image" title="{{{name_module}}}">
+                                                    <img class="img-fluid" src="{{{icon_module}}}" alt="{{{name_module}}}">
+                                                </div>
+                                                <p class="text-truncate">{{{name_module}}}</p>
+                                            </a>
+                                            {{#mark_completion}} 
+                                            <div class="list-activity__mark" > {{{mark_completion}}} </div>
+                                            {{/mark_completion}}
+                                        </div>
+                                        {{/type_activity}}
+                                        {{^type_activity}}
+                                        <!-- Content Label -->
+                                        <div class="list-activity--label">{{{summary_label}}}</div>
+                                        {{/type_activity}}
+                                    {{/type_activity_h5p}}
+
+                                {{/data_activity}}
+                                {{^data_activity}}
+                                    <p class="my-3 text-center">{{#str}}no_activities_found, format_uniminuto_english{{/str}}</p>
+                                {{/data_activity}}
+                            </div>
+                        </div>
+                        {{/info_sections_module}}
+                    </div>
+                    <button class="carousel--control carousel-control-prev" type="button" data-target="#carouselSectionControls" data-slide="prev">
+                        <svg viewBox="0 0 7.125 7.125" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.2 1.489a0.238 0.238 0 0 1 0.011 0.336L2.582 3.563 4.212 5.3a0.238 0.238 0 0 1 -0.347 0.325l-1.782 -1.9a0.238 0.238 0 0 1 0 -0.325l1.782 -1.9a0.238 0.238 0 0 1 0.336 -0.011Z" /></svg>
+                    </button>
+                    <button class="carousel--control carousel-control-next" type="button" data-target="#carouselSectionControls" data-slide="next">
+                        <svg viewBox="0 0 7.125 7.125" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.925 1.489a0.237 0.237 0 0 1 0.336 0.011l1.781 1.9a0.237 0.237 0 0 1 0 0.325l-1.781 1.9a0.237 0.237 0 1 1 -0.347 -0.325L4.544 3.563l-1.629 -1.738a0.237 0.237 0 0 1 0.011 -0.336Z" /></svg>
+                    </button>
+                </div>
+      
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Section Recourses -->
+<div class="modal fade modal-sections" id="sectionsRecursos" tabindex="-1" aria-labelledby="sectionsRecursosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close modalClose" data-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.05 24.05" xml:space="preserve"><path d="m14.338 11.748 6.012 -6.056a0.671 0.671 0 0 0 0 -0.973l-0.928 -0.973a0.671 0.671 0 0 0 -0.973 0l-6.057 6.056a0.447 0.447 0 0 1 -0.648 0L5.687 3.7a0.671 0.671 0 0 0 -0.973 0l-0.975 0.973a0.671 0.671 0 0 0 0 0.973l6.057 6.056a0.447 0.447 0 0 1 0 0.648L3.7 18.455a0.671 0.671 0 0 0 0 0.973l0.973 0.973a0.671 0.671 0 0 0 0.973 0l6.056 -6.056a0.447 0.447 0 0 1 0.648 0l6.056 6.056a0.671 0.671 0 0 0 0.973 0l0.976 -0.972a0.671 0.671 0 0 0 0 -0.973l-6.012 -6.056a0.447 0.447 0 0 1 0 -0.648z"/></svg>
+                </button>
+                <div id="carouselRecourseControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        {{#info_sections_recourse}}
+                        <div class="carousel-item {{{active_carousel_section}}}">
+                            <div class="modalSection__header mx-3">
+                                <h2 class="modalSection__header-title">{{{name_section}}}</h2>
+                            </div>
+                            <div class="modalSection__body">
+                                {{#data_activity}}
+                                    {{#type_activity}}
+                                    <!-- Content Activity -->
+                                    <div class="list-activity">
+                                        <a class="list-activity__link mx-3" href="{{{pageurl}}}" {{{window_pageurl}}}>
+                                            <div class="icon-image" title="{{{name_module}}}">
+                                                <img class="img-fluid" src="{{{icon_module}}}" alt="{{{name_module}}}">
+                                            </div>
+                                            <p class="text-truncate">{{{name_module}}}</p>
+                                        </a>
+                                        {{#mark_completion}} 
+                                        <div class="list-activity__mark" > {{{mark_completion}}} </div>
+                                        {{/mark_completion}}
+                                    </div>
+                                    {{/type_activity}}
+                                    {{^type_activity}}
+                                    <!-- Content Label -->
+                                    <div class="list-activity--label">{{{summary_label}}}</div>
+                                    {{/type_activity}}
+                                {{/data_activity}}
+                                {{^data_activity}}
+                                    <p class="my-3 text-center">{{#str}}no_activities_found, format_uniminuto_english{{/str}}</p>
+                                {{/data_activity}}
+                            </div>
+                        </div>
+                        {{/info_sections_recourse}}
+                    </div>
+                    <button class="carousel--control carousel-control-prev" type="button" data-target="#carouselRecourseControls" data-slide="prev">
+                        <svg viewBox="0 0 7.125 7.125" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.2 1.489a0.238 0.238 0 0 1 0.011 0.336L2.582 3.563 4.212 5.3a0.238 0.238 0 0 1 -0.347 0.325l-1.782 -1.9a0.238 0.238 0 0 1 0 -0.325l1.782 -1.9a0.238 0.238 0 0 1 0.336 -0.011Z" /></svg>
+                    </button>
+                    <button class="carousel--control carousel-control-next" type="button" data-target="#carouselRecourseControls" data-slide="next">
+                        <svg viewBox="0 0 7.125 7.125" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.925 1.489a0.237 0.237 0 0 1 0.336 0.011l1.781 1.9a0.237 0.237 0 0 1 0 0.325l-1.781 1.9a0.237 0.237 0 1 1 -0.347 -0.325L4.544 3.563l-1.629 -1.738a0.237 0.237 0 0 1 0.011 -0.336Z" /></svg>
+                    </button>
+                </div>
+      
+            </div>
+        </div>
+    </div>
+</div>
+
+

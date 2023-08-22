@@ -1,0 +1,64 @@
+{{!
+    @template format_uniminuto_course/student_layout
+
+
+    Example context (json):
+    {
+        "image_url: "path",
+        "classname_modalidad: "Clase de modalidad",
+        "info_sections_module": [
+            {
+                "hiddensection": true / false,
+                "num_section": "#",
+                "name_section": "Text name",
+                "active_nav_section": "Clase seccion activada",
+                "tab_welcome": true / false,
+                "data_activity": [
+                    {
+                        "units": [
+                            {
+                                "name_module": "Text Name",
+                                "num_module": "#",
+                                "type_module": "Text tipo actividad",
+                                "pageurl": "URL",
+                                "class_unit_state": "Clase unidad activada",
+                                "progress_data": [{}],
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+    }
+}}
+
+<!-- Unidades -->
+<div class="container-units">
+    {{#data_activity.units}}
+    <div class="{{{class_unit_state}}} activity">
+        <button class="unit__detail" type="button" data-openmodal="{{{pageurl}}}">{{{num_module}}}</button>
+        <div class="unit__category"><i class="fa fa-fw fa-plus-circle"></i></div>
+        <div class="unit__category--progress">
+            <div class="progress-top">
+                <h4>Progress {{{name_module}}}</h4>
+                <i class="fa fa-fw fa-times close-category"></i>
+            </div>
+            <div class="progress-bottom">
+                {{#progress_data}}
+                <div class="category-progress">
+                    <span class="category--title text-truncate">{{{name_category}}}</span>
+                    <div class="progress"><div class="progress__bar" role="progressbar" style="width: {{{progress_category}}}%;" aria-valuenow="{{{progress_category}}}" aria-valuemin="0" aria-valuemax="{{{progress_category}}}"></div></div>
+                    <div class="progress--number">{{{progress_category}}}%</div>
+                </div>
+                {{/progress_data}}
+            </div>
+        </div>
+    </div>
+    {{/data_activity.units}}
+</div>
+
+<!-- Fondos City -->
+<div class="background-city background-city--behind"></div>
+<div class="background-city background-city--front"></div>
+
+
